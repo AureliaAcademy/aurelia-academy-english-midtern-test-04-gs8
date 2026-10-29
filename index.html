@@ -1,0 +1,271 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>English 8 Mid-term Test – Aurelia Academy</title>
+<style>
+:root,[data-theme=dark]{--bg:#0B0716;--s1:#140E25;--s2:#1C1535;--s3:#261C47;--ln:rgba(167,139,250,.18);--p:#8B5CF6;--p2:#6D28D9;--a:#A78BFA;--g:#D4B26A;--t:#F3F0FF;--m:#A99FC8;--ok:#4ADE80;--no:#F87171;--w:#FBBF24;--r:18px;--hb:rgba(11,7,22,.82);--pt:#E7E1FA;--hg:linear-gradient(120deg,#fff 20%,#C4B5FD 60%,#D4B26A);--lg:linear-gradient(160deg,rgba(38,28,71,.85),rgba(20,14,37,.9));--g1:rgba(109,40,217,.55);--g2:rgba(212,178,106,.16);--gl:rgba(167,139,250,.045);color-scheme:dark}
+[data-theme=light]{--bg:#F6F3FF;--s1:#FFFFFF;--s2:#F4F0FF;--s3:#E4DDF7;--ln:rgba(76,29,149,.14);--p:#7C3AED;--p2:#5B21B6;--a:#6D28D9;--g:#8F6B1E;--t:#21163D;--m:#6B6185;--ok:#15803D;--no:#B91C1C;--w:#B45309;--hb:rgba(250,249,255,.85);--pt:#2B1F4D;--hg:linear-gradient(120deg,#3B0764 15%,#6D28D9 60%,#8F6B1E);--lg:linear-gradient(160deg,#fff,#F4F0FF);--g1:rgba(139,92,246,.28);--g2:rgba(212,178,106,.28);--gl:rgba(76,29,149,.05);color-scheme:light}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;min-height:100dvh;display:flex;flex-direction:column;background:var(--bg);color:var(--t);font:16px/1.65 "Inter","Segoe UI Variable Text","SF Pro Text",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;letter-spacing:-.005em;-webkit-font-smoothing:antialiased}
+.bg{position:fixed;inset:0;z-index:-1;background:radial-gradient(700px 480px at 85% -5%,var(--g1),transparent 65%),radial-gradient(600px 420px at -5% 105%,var(--g2),transparent 60%),linear-gradient(var(--gl) 1px,transparent 1px) 0 0/48px 48px,linear-gradient(90deg,var(--gl) 1px,transparent 1px) 0 0/48px 48px,var(--bg)}.bg:after{content:"";position:absolute;width:420px;height:420px;right:8%;top:12%;border-radius:50%;background:radial-gradient(circle,var(--g1),transparent 70%);filter:blur(30px);animation:fl 14s ease-in-out infinite alternate}@keyframes fl{to{transform:translate(-60px,50px) scale(1.15)}}
+header{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:18px;padding:12px clamp(14px,3vw,32px);background:var(--hb);backdrop-filter:blur(14px);border-bottom:1px solid var(--ln)}
+.logo{font-weight:700;font-size:15px;letter-spacing:.34em;color:var(--t)}.logo i{font-style:normal;color:var(--g);margin-left:.6em;font-weight:500}
+#tabs{display:flex;gap:4px;margin:0 auto;background:var(--s1);border:1px solid var(--ln);border-radius:999px;padding:4px}
+#tabs button{background:none;box-shadow:none;color:var(--m);padding:7px 14px;min-height:34px;border-radius:999px;font-size:13.5px;font-weight:600}#tabs button.on{background:linear-gradient(135deg,var(--p2),var(--p));color:#fff}
+.rt{display:flex;gap:12px;align-items:center;margin-left:auto}#prog{font-size:13px;color:var(--m)}
+#tm{font:600 18px ui-monospace,"SF Mono",Consolas,monospace;background:var(--s2);border:1px solid var(--g);color:var(--g);padding:6px 14px;border-radius:999px;letter-spacing:.06em}#tm.low{color:#fff;background:var(--no);border-color:var(--no);animation:bl 1s infinite}
+@keyframes bl{50%{opacity:.65}}@media(prefers-reduced-motion:reduce){#tm.low{animation:none}html{scroll-behavior:auto}*{transition:none!important}}
+main{flex:1;width:100%;max-width:1240px;margin:0 auto;padding:clamp(14px,3vw,32px) clamp(14px,3vw,32px) 110px}
+main:has(#start:not(.hide)){padding-bottom:clamp(14px,3vw,32px);display:flex}
+#start{flex:1;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,5vw,72px);align-items:center;min-height:calc(100dvh - 230px)}
+.eb{font-size:12px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--g)}
+#start h1{font-size:clamp(40px,6.2vw,76px);line-height:1.02;letter-spacing:-.04em;font-weight:700;margin:14px 0 18px;background:var(--hg);-webkit-background-clip:text;background-clip:text;color:transparent}
+#start p.lead{color:var(--m);font-size:18px;max-width:520px;margin:0 0 30px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:520px}.stats div{background:var(--s1);border:1px solid var(--ln);border-radius:14px;padding:14px 8px;text-align:center}.stats b{display:block;font-size:26px;font-weight:700;letter-spacing:-.03em;color:var(--t)}.stats span{font-size:10.5px;letter-spacing:.14em;color:var(--m);font-weight:600}
+.login{background:var(--lg);border:1px solid var(--ln);border-radius:26px;padding:clamp(22px,3vw,38px);box-shadow:0 30px 80px -30px rgba(109,40,217,.6),inset 0 1px 0 rgba(255,255,255,.06);backdrop-filter:blur(10px)}
+.login h2{margin:0 0 4px;font-size:22px;letter-spacing:-.02em}.login p{margin:0 0 20px;color:var(--m);font-size:14.5px}
+.login label{font-size:12px;font-weight:600;letter-spacing:.1em;color:var(--a);text-transform:uppercase}
+.login input{width:100%;margin:8px 0 18px;padding:15px 16px;border-radius:14px;border:1px solid var(--ln);background:var(--bg);color:var(--t);font-size:16px;outline:0}.login input:focus{border-color:var(--p);box-shadow:0 0 0 4px rgba(139,92,246,.25)}
+button{font:inherit;font-weight:600;cursor:pointer;border:0;border-radius:14px;padding:13px 22px;min-height:46px;color:#fff;background:linear-gradient(135deg,var(--p2),var(--p));box-shadow:0 10px 24px -12px var(--p);transition:transform .15s,box-shadow .15s,background .15s}button:hover{transform:translateY(-1px)}
+button.s{background:var(--s2);color:var(--t);box-shadow:none;border:1px solid var(--ln)}button.gold{background:linear-gradient(135deg,#B8935A,#EBD39B);color:#24160a;box-shadow:0 10px 24px -12px var(--g)}.login button{width:100%;min-height:52px;font-size:16px}
+#pal{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:22px}#pal button{padding:0;width:36px;min-height:36px;border-radius:10px;font-size:13px;background:var(--s1);color:var(--m);border:1px solid var(--ln);box-shadow:none}#pal button.d{background:rgba(139,92,246,.28);color:var(--t);border-color:var(--p)}#pal button.c{border-color:var(--g);color:var(--g)}
+.ph{margin-bottom:22px}.ph h2{font-size:clamp(24px,3.4vw,36px);letter-spacing:-.03em;margin:6px 0 0;line-height:1.15}.ph .rg{color:var(--m);font-size:14px;margin-top:6px}
+.split{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:26px;align-items:start}
+.ps{position:sticky;top:84px;max-height:calc(100dvh - 190px);overflow:auto;background:var(--s1);border:1px solid var(--ln);border-radius:var(--r);padding:22px;scrollbar-width:thin;scrollbar-color:var(--p2) transparent}
+.pass{font-size:17px;line-height:1.8;color:var(--pt);padding:4px 0}.ps .pass+.pass{border-top:1px solid var(--ln);margin-top:14px;padding-top:16px}.pass b{color:var(--g);letter-spacing:.02em}
+.q{background:var(--s1);border:1px solid var(--ln);border-radius:var(--r);padding:18px 20px;margin-bottom:14px;scroll-margin-top:96px}.q .qn{display:inline-grid;place-items:center;min-width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--p2),var(--p));font-weight:700;font-size:14px;margin-right:10px}.q .qt{font-weight:600;font-size:16.5px}
+.sign{background:#F5F3FF;color:#1b1233;border-radius:12px;padding:14px 18px;white-space:pre-line;margin:12px 0;font-weight:600;line-height:1.5;border-left:5px solid var(--g)}
+.opt{display:flex;gap:12px;align-items:flex-start;padding:13px 14px;border:1px solid var(--ln);border-radius:14px;margin:9px 0;cursor:pointer;background:var(--s2);transition:border-color .15s,background .15s}.opt:hover{border-color:var(--a)}.opt input{position:absolute;opacity:0}
+.opt .lt{flex:none;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--a);display:grid;place-items:center;font-size:13px;font-weight:700;color:var(--a)}
+.opt:has(input:checked){border-color:var(--p);background:linear-gradient(135deg,rgba(109,40,217,.45),rgba(139,92,246,.2));box-shadow:0 0 0 1px var(--p)}.opt:has(input:checked) .lt{background:var(--g);border-color:var(--g);color:#24160a}.opt:has(input:focus-visible){outline:2px solid var(--g)}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.g2 .q{margin:0}
+input.gap{width:100%;max-width:280px;padding:13px 14px;border:1px solid var(--ln);border-radius:12px;font-size:16px;margin-top:10px;background:var(--bg);color:var(--t);outline:0}input.gap:focus{border-color:var(--p);box-shadow:0 0 0 4px rgba(139,92,246,.25)}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;align-items:center;gap:12px;padding:12px clamp(14px,3vw,32px);background:var(--hb);backdrop-filter:blur(14px);border-top:1px solid var(--ln)}
+.bar{flex:1;height:6px;background:var(--s3);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--p),var(--g));width:0;transition:width .3s}
+.card{background:var(--s1);border:1px solid var(--ln);border-radius:24px;padding:clamp(20px,3vw,34px);margin-bottom:18px}.card h2{margin:6px 0 16px;font-size:28px;letter-spacing:-.03em}
+.score{display:flex;gap:28px;align-items:center;flex-wrap:wrap;margin:10px 0 20px}.ring{width:150px;height:150px;position:relative}.ring svg{transform:rotate(-90deg)}.ring b{position:absolute;inset:0;display:grid;place-items:center;font-size:42px;font-weight:700;letter-spacing:-.04em}
+table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid var(--ln);padding:10px 8px;text-align:left;font-size:15px}th{color:var(--m);font-weight:600}
+.ok{color:var(--ok)}.bad{color:var(--no)}.wn{color:var(--w)}.sm{font-size:14px;color:var(--m)}.ctl{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.th{width:40px;min-height:40px;padding:0;border-radius:50%;background:var(--s2);color:var(--g);border:1px solid var(--ln);box-shadow:none;font-size:18px;display:grid;place-items:center}
+header{transition:box-shadow .3s}header.sc{box-shadow:0 10px 30px -18px #000}
+body.ex main{padding-bottom:28px}body.ex footer{margin-bottom:84px}
+@keyframes inR{from{opacity:0;transform:translateX(44px)}to{opacity:1;transform:none}}@keyframes inL{from{opacity:0;transform:translateX(-44px)}to{opacity:1;transform:none}}@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+#body[data-dir=fw]>*{animation:inR .55s cubic-bezier(.2,.8,.2,1) both}#body[data-dir=bk]>*{animation:inL .55s cubic-bezier(.2,.8,.2,1) both}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(.2,.8,.2,1),transform .6s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
+#start>*{animation:up .8s cubic-bezier(.2,.8,.2,1) both}#start>.login{animation-delay:.15s}#res .card{animation:up .7s cubic-bezier(.2,.8,.2,1) both}
+.opt{transition:transform .15s,border-color .15s,background .2s,box-shadow .2s}.opt:active{transform:scale(.985)}.opt .lt{transition:all .2s}
+@media(prefers-reduced-motion:reduce){*,*:after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+.hide{display:none!important}
+footer{text-align:center;padding:26px 16px;color:var(--m);font-size:13.5px;border-top:1px solid var(--ln);background:var(--hb);line-height:1.8}footer b{color:var(--g);letter-spacing:.34em;font-size:13px}
+@media(max-width:900px){#start{grid-template-columns:1fr;min-height:0}.split{grid-template-columns:1fr;gap:12px}.ps{top:64px;max-height:38vh;z-index:5;padding:16px;box-shadow:0 14px 20px -12px #000}.g2{grid-template-columns:1fr}header{flex-wrap:wrap;gap:8px}#tabs{order:3;width:100%;justify-content:space-between;margin:0}#prog{display:none}.stats b{font-size:22px}.dock .s{padding:12px 14px}}
+@media print{@page{size:A4;margin:14mm}header,.dock,footer,.bg,.ctl{display:none!important}body{background:#fff;color:#000}.card{background:#fff;border-color:#ccc}th,td{color:#000;border-color:#ccc}.ok{color:#15803d}.bad{color:#b91c1c}.wn{color:#b45309}.ring b{color:#000}}
+
+.ta{width:100%;min-height:380px;padding:20px;border-radius:18px;border:1px solid var(--ln);background:var(--s1);color:var(--t);font:17px/1.75 inherit;resize:vertical;outline:0;transition:border-color .2s,box-shadow .2s}.ta:focus{border-color:var(--p);box-shadow:0 0 0 4px rgba(139,92,246,.25)}
+.wcn{display:flex;justify-content:space-between;gap:10px;margin-top:10px;font-size:14px;color:var(--m)}.wcn b{color:var(--t)}
+.pass ul{margin:8px 0;padding-left:22px}.pic{width:100%;border-radius:12px;background:#fff;padding:6px;margin-top:14px}
+.crit{margin-top:22px;max-width:560px;background:var(--s1);border:1px solid var(--ln);border-radius:16px;padding:6px 18px}.crit summary{cursor:pointer;font-weight:600;padding:10px 0}.cg{display:grid;gap:10px;margin:6px 0 10px}.cg div{border-left:3px solid var(--g);padding-left:12px}.cg b{display:block}.cg span{color:var(--m);font-size:14.5px}
+.lead2{color:var(--m);margin:0 0 14px}.ans{white-space:pre-wrap;background:var(--s2);border:1px solid var(--ln);border-radius:14px;padding:16px 18px;font-size:16.5px;line-height:1.75;min-height:90px}
+table.sh{margin-top:14px}table.sh td,table.sh th{border:1px solid var(--ln)}table.sh td+td,table.sh th+th{width:140px;height:38px}
+@media(max-width:900px){.ta{min-height:260px}}
+@media print{.crit,.th{display:none}.ans{background:#fff;border-color:#ccc;color:#000}table.sh td,table.sh th{border:1px solid #999;color:#000}.card{break-inside:avoid}}
+.sec{margin:18px 0 10px}.sec h3{margin:0 0 4px;font-size:18px;letter-spacing:-.02em}.sec p{margin:0}.ph+.sec{margin-top:0}.bl{letter-spacing:.1em;color:var(--g)}.q u{text-decoration-thickness:2px;text-underline-offset:3px}.qs1 .q{margin-bottom:12px}
+
+.sgv{margin:12px 0;border-radius:14px;background:linear-gradient(135deg,#ECE8FA,#D9D2F1);padding:16px;display:grid;place-items:center}.sgv svg{width:100%;max-width:320px;height:auto;filter:drop-shadow(0 8px 14px rgba(40,20,90,.25))}
+#tmw{display:flex;align-items:center;gap:8px;background:var(--s2);border:1px solid var(--g);border-radius:999px;padding:4px 14px 4px 6px}#tmw #tm{background:none;border:0;padding:0;color:var(--g);font:600 18px ui-monospace,"SF Mono",Consolas,monospace;letter-spacing:.05em}#tmw.low{background:var(--no);border-color:var(--no);animation:bl 1s infinite}#tmw.low #tm{color:#fff}
+#tabs button small{margin-left:7px;font-size:11px;opacity:.7;font-weight:600}
+@property --ang{syntax:"<angle>";inherits:false;initial-value:0deg}@keyframes rot{to{--ang:360deg}}
+.login{position:relative}.login:after{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1.5px;background:conic-gradient(from var(--ang),transparent 0 55%,var(--g),var(--p),transparent 95%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:rot 7s linear infinite;pointer-events:none}
+.q,.login{position:relative;overflow:hidden}.q:before,.login:before{content:"";position:absolute;inset:0;background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),rgba(139,92,246,.16),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}.q:hover:before,.login:hover:before{opacity:1}
+.bars{margin:18px 0}.br{display:grid;grid-template-columns:200px 1fr 54px;gap:14px;align-items:center;margin:9px 0;font-size:14.5px}.br div{height:10px;background:var(--s3);border-radius:9px;overflow:hidden}.br i{display:block;height:100%;background:linear-gradient(90deg,var(--p),var(--g));border-radius:9px;transition:width 1.1s cubic-bezier(.2,.8,.2,1)}.br b{text-align:right}
+.wr{margin:16px 0}.wr .ans{min-height:0;margin:6px 0}
+@media(max-width:900px){.br{grid-template-columns:110px 1fr 46px}#tabs button small{display:none}}
+@media print{.bars{display:none}}
+
+html,body{max-width:100%;overflow-x:clip}*{min-width:0}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}.logo{white-space:nowrap}.rt{margin-left:auto;display:flex;align-items:center;gap:10px;flex:none}
+#tabs{order:3;flex:1 1 100%;margin:0;display:flex;gap:4px;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;border-radius:999px;scroll-snap-type:x proximity}#tabs::-webkit-scrollbar{display:none}#tabs button{flex:none;scroll-snap-align:center;white-space:nowrap}
+@media(min-width:1280px){header{flex-wrap:nowrap}#tabs{order:0;flex:0 1 auto;margin:0 auto}}
+.palw{margin-bottom:20px;background:var(--s1);border:1px solid var(--ln);border-radius:16px;padding:6px 14px}.palw summary{cursor:pointer;font-weight:600;padding:10px 0;font-size:14px;color:var(--m);list-style:none}.palw summary::-webkit-details-marker{display:none}.palw summary:before{content:"▸ ";color:var(--g)}.palw[open] summary:before{content:"▾ "}.palw #pal{margin:4px 0 12px}
+.qrow{display:flex;align-items:flex-start;gap:0}.qb{flex:1;min-width:0}.q .qt{overflow-wrap:anywhere}
+.fld{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px;margin-top:10px;padding:6px 14px;border:1px solid var(--ln);border-radius:14px;background:var(--bg);transition:border-color .2s,box-shadow .2s}.fld:focus-within{border-color:var(--p);box-shadow:0 0 0 4px rgba(139,92,246,.25)}
+.fld .pf{font-weight:700;color:var(--g);user-select:none;-webkit-user-select:none;padding:6px 0}.fld input{flex:1 1 150px;border:0;outline:0;background:transparent;color:var(--t);font-size:16px;padding:9px 0}
+.aud{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;background:var(--s1);border:1px solid var(--ln);border-radius:20px;padding:18px 20px;margin:6px 0 18px}
+.eq{display:flex;gap:4px;align-items:center;height:48px}.eq i{width:5px;height:12px;border-radius:3px;background:linear-gradient(var(--g),var(--p))}.eq.on i{animation:eq .9s ease-in-out infinite alternate}.eq i:nth-child(2){animation-delay:.1s}.eq i:nth-child(3){animation-delay:.25s}.eq i:nth-child(4){animation-delay:.05s}.eq i:nth-child(5){animation-delay:.35s}.eq i:nth-child(6){animation-delay:.15s}.eq i:nth-child(7){animation-delay:.3s}@keyframes eq{to{height:44px}}
+.abar{height:6px;background:var(--s3);border-radius:9px;overflow:hidden;margin:10px 0 6px}.abar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--p),var(--g));transition:width .4s}.aud button:disabled{opacity:.55;cursor:not-allowed;transform:none}
+#chk{width:100%;margin:2px 0 6px}#chkm{min-height:20px;margin-bottom:12px}
+.tw{overflow-x:auto}.tw table{min-width:520px}
+@media(max-width:900px){.aud{grid-template-columns:1fr}.aud button{width:100%}.eq{justify-content:center}.rt{gap:8px}#tmw{padding:3px 10px 3px 5px}#tmw #tm{font-size:16px}#prog{display:none}.dock{gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom))}.dock button{padding:11px 14px;font-size:15px}.dock .bar{min-width:20px}.logo{font-size:13px;letter-spacing:.24em}.g2{grid-template-columns:1fr}.ps{max-height:36vh}.split{gap:10px}.q{padding:14px}.q .qn{margin-right:8px}}
+@media(max-width:420px){.dock .s{padding:11px 10px}.stats{grid-template-columns:repeat(2,1fr)}}
+@media print{.tw{overflow:visible}}
+.ps{position:sticky;top:calc(var(--hh,84px) + 12px);max-height:calc(100dvh - var(--hh,84px) - 110px);align-self:start}
+.q{scroll-margin-top:calc(var(--hh,84px) + 16px)}
+@media(max-width:900px){.ps{top:calc(var(--hh,96px) + 4px);max-height:34dvh}.split .q{scroll-margin-top:calc(var(--hh,96px) + 34dvh + 16px)}}
+</style>
+</head><body>
+<div class="bg"></div>
+<header><span class="logo">AURELIA<i>ACADEMY</i></span><div class="rt"><span id="prog" class="hide"></span><div id="tmw" class="hide"><svg viewBox="0 0 44 44" width="28" height="28"><circle cx="22" cy="22" r="18" fill="none" stroke="rgba(167,139,250,.25)" stroke-width="4"/><circle id="tc" cx="22" cy="22" r="18" fill="none" stroke="var(--g)" stroke-width="4" stroke-linecap="round" stroke-dasharray="113.1" stroke-dashoffset="0" transform="rotate(-90 22 22)"/></svg><span id="tm">60:00</span></div><button class="th" id="th" aria-label="Toggle light / dark mode">☾</button></div><nav id="tabs" class="hide" aria-label="Sections"></nav></header>
+<main>
+<section id="start"><div><div class="eb">Global Success · Units 1, 2 &amp; 3</div><h1>English 8<br>Mid-term Test</h1><p class="lead">Leisure Time · Life in the Countryside · Teenagers.<br>Read the instructions for each section carefully and answer all the questions.</p>
+<div class="stats"><div><b>50</b><span>QUESTIONS</span></div><div><b>8</b><span>PARTS</span></div><div><b>60'</b><span>MINUTES</span></div><div><b>10</b><span>MARKS</span></div></div>
+<details class="crit"><summary>Marking scheme &amp; listening</summary><div class="cg"><div><b>Questions 1–42 · Multiple choice</b><span>42 questions × 0.2 = 8.4 points.</span></div><div><b>Questions 43–50 · Writing</b><span>8 items × 0.2 = 1.6 points. Spelling and grammar must be correct.</span></div><div><b>Part A · Listening</b><span>You will hear the recording twice. Make sure your sound is on.</span></div></div></details></div>
+<div class="login"><h2>Candidate details</h2><p>Enter your full name and class. The timer starts when you press Start.</p><label for="nm">Full name and class</label><input type="text" id="nm" placeholder="e.g. Nguyen Van A – 8A" autocomplete="name"><button id="go" class="gold">Start the test →</button></div></section>
+<section id="exam" class="hide"><details id="palw" class="palw" open><summary>Question map <span id="prog2"></span></summary><div id="pal"></div></details><div id="body"></div></section>
+<section id="res" class="hide"></section>
+</main>
+<div class="dock hide" id="dock"><button class="s" id="prev">← Previous</button><div class="bar"><i id="pb"></i></div><button class="s" id="next">Next →</button><button class="gold" id="sub">Submit</button></div>
+<footer><b>AURELIA ACADEMY</b><br>Contact: 0964 964 264 | Ms. Angie<br>© 2026 Aurelia Academy. All rights reserved.</footer>
+<script>
+const $=s=>document.querySelector(s),TIME=60,AUDIO_SRC='';/* optional: URL of a recorded MP3 of the whole dialogue; leave empty to use built-in British English voices */
+const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const L='ABCD',FONT='system-ui,"Segoe UI",Roboto,Arial,sans-serif';
+const SCRIPT=[['E','Hi, Tom. What do you usually do at weekends?'],['T','I often visit my uncle in the countryside. I help him feed the ducks and sometimes water the vegetables. What about you?'],['E','I like reading adventure stories. I usually read in the library or at home because it is quiet.'],['T','Do you enjoy visiting the countryside?'],['E','Yes. I like the fresh air, but this week I’m worried because I have several tests and a lot of homework.'],['T','That sounds stressful. Have you tried making a study plan?'],['E','Not yet. I usually do my homework whenever I have time.'],['T','Try writing down your tasks and doing the most important ones first. Remember to take short breaks, too.'],['E','That’s a good idea. I’ll make a plan tonight so I have time to read after studying.'],['T','Great! Getting enough sleep will help you feel better, too.']];
+const S={
+34:`<svg viewBox="0 0 360 200" role="img" aria-label="Sign: Please do not use your phone in class"><rect x="5" y="5" width="350" height="190" rx="14" fill="#fff" stroke="#C62828" stroke-width="6"/><rect x="62" y="64" width="40" height="72" rx="8" fill="#222"/><rect x="67" y="73" width="30" height="48" rx="3" fill="#6d8cff"/><circle cx="82" cy="128" r="3" fill="#aaa"/><circle cx="82" cy="100" r="52" fill="none" stroke="#C62828" stroke-width="9"/><path d="M45 63L119 137" stroke="#C62828" stroke-width="9" stroke-linecap="round"/><g font-family="Arial,sans-serif" font-weight="900" fill="#1b1b1b"><text x="152" y="62" font-size="18">PLEASE</text><text x="152" y="94" font-size="25">DO NOT USE</text><text x="152" y="124" font-size="25">YOUR PHONE</text><text x="152" y="154" font-size="25">IN CLASS</text></g></svg>`,
+35:`<svg viewBox="0 0 400 230" role="img" aria-label="Notice: Countryside clean-up"><rect x="5" y="5" width="390" height="220" rx="14" fill="#fff" stroke="#2E7D32" stroke-width="5"/><path d="M5 19a14 14 0 0 1 14-14h362a14 14 0 0 1 14 14v46H5z" fill="#2E7D32"/><text x="200" y="45" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="25" fill="#fff">COUNTRYSIDE CLEAN-UP</text><g font-family="Arial,sans-serif" fill="#1b1b1b" text-anchor="middle"><text x="200" y="108" font-weight="800" font-size="25">Sunday, 8:00 a.m.</text><text x="200" y="152" font-size="20">Meet at the village hall.</text><text x="200" y="190" font-size="20">Bring gloves and a reusable bag.</text></g></svg>`,
+36:`<svg viewBox="0 0 360 190" role="img" aria-label="Sign: Keep off the grass"><rect x="5" y="5" width="350" height="180" rx="14" fill="#1B5E20"/><rect x="14" y="14" width="332" height="162" rx="9" fill="none" stroke="#fff" stroke-width="3"/><g font-family="Arial,sans-serif" font-weight="900" fill="#fff" text-anchor="middle"><text x="180" y="78" font-size="38">KEEP OFF</text><text x="180" y="122" font-size="38">THE GRASS</text></g><g fill="#8BC34A"><path d="M40 176q4-22 9-28q2 14 5 28zM56 176q2-16 10-22q0 12 2 22zM300 176q4-22 9-28q2 14 5 28zM316 176q2-16 10-22q0 12 2 22z"/></g></svg>`,
+37:`<svg viewBox="0 0 400 230" role="img" aria-label="Notice: Student well-being session"><rect x="5" y="5" width="390" height="220" rx="14" fill="#fff" stroke="#4C1D95" stroke-width="5"/><path d="M5 19a14 14 0 0 1 14-14h362a14 14 0 0 1 14 14v46H5z" fill="#4C1D95"/><text x="200" y="43" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="20" fill="#fff">STUDENT WELL-BEING SESSION</text><g font-family="Arial,sans-serif" fill="#1b1b1b" text-anchor="middle"><text x="200" y="108" font-size="17" fill="#6B6185">Topic:</text><text x="200" y="140" font-weight="800" font-size="22">Managing Homework and Stress</text><text x="200" y="192" font-size="21">Thursday, 3:00 p.m. | Room 8</text></g></svg>`};
+const M=(n,s,o,a)=>({n,s,o:o.split('|'),a:L.indexOf(a),k:'mc'});
+const Q=[
+M(1,'What does Emma like doing at weekends?','Baking cakes|Reading adventure stories|Playing the piano|Going fishing','B'),
+M(2,'Where does Emma usually read?','In the school canteen|In the library or at home|At the bus stop|In the sports centre','B'),
+M(3,'What does Tom help his uncle do in the countryside?','Feed the ducks|Repair computers|Sell newspapers|Paint houses','A'),
+M(4,'What does Tom like about village life?','The busy traffic|The crowded shopping malls|The fresh air and quiet surroundings|The loud music','C'),
+M(5,'Why is Emma worried this week?','She has too many tests and homework.|She has lost her bicycle.|She has no hobbies.|She wants to move house.','A'),
+M(6,'What does Tom suggest Emma do?','Study all night.|Ignore her teachers.|Make a study plan and take short breaks.|Spend more time playing online games.','C'),
+M(7,'Choose the word whose underlined part is pronounced differently from the others.','want<u>ed</u>|need<u>ed</u>|wash<u>ed</u>|visit<u>ed</u>','C'),
+M(8,'Choose the word whose underlined part is pronounced differently from the others.','h<u>oo</u>k|b<u>oo</u>k|f<u>oo</u>t|f<u>oo</u>d','D'),
+M(9,'Choose the word whose underlined part is pronounced differently from the others.','<u>th</u>ank|<u>th</u>ink|<u>th</u>ose|<u>th</u>ree','C'),
+M(10,'Choose the word that has a different primary stress pattern.','enjoy|hobby|leisure|village','A'),
+M(11,'Choose the word that has a different primary stress pattern.','exciting|popular|difficult|teenager','A'),
+M(12,'Choose the word that has a different primary stress pattern.','community|tradition|activity|peaceful','D'),
+M(13,'My friends enjoy ______ board games after school.','play|playing|to playing|played','B'),
+M(14,'Nowadays, my parents often ______ my grandparents in the countryside during holidays.','visit|visiting|visits|visited','A'),
+M(15,'Farmers grow rice in ______.','paddy fields|shopping malls|libraries|bus stations','A'),
+M(16,'The village road is ______ than the main road in town.','narrow|narrower|narrowest|more narrower','B'),
+M(17,'It is helpful to talk ______ someone you trust when you feel stressed.','to|at|on|for','A'),
+M(18,'Mai spends too much time ______ short videos online.','watch|to watch|watching|watched','C'),
+M(19,'My brother prefers cycling ______ playing computer games.','than|to|from|with','B'),
+M(20,'There are ______ people and less traffic in the village than in the city.','fewer|less|much|little','A'),
+M(21,'My cousin is interested ______ traditional crafts.','on|in|at|for','B'),
+M(22,'The people in our village are very ______ and welcome visitors warmly.','hospitable|stressful|crowded|noisy','A'),
+M(23,'You should turn off your phone ______ you are studying.','when|although|but|so','A'),
+M(24,'My sister loves ______ photos of flowers and trees.','take|to taking|taking|takes','C'),
+M(25,'This exercise is ______ than the one we did yesterday.','easy|easier|easiest|more easier','B'),
+M(26,'Anna: “I’m really nervous about speaking in front of the class.” Ben: “______”','Try practising with a friend first.|That’s a delicious meal.|I bought a new jacket.|Never do your homework.','A'),
+M(27,'He stayed up late playing games; ______, he felt sleepy in class.','although|therefore|but|however','B'),
+M(28,'Gap (28)','to|with|at|for','A'),M(29,'Gap (29)','feed|feeds|feeding|fed','A'),M(30,'Gap (30)','quiet|quieter|quietest|more quieter','B'),
+M(31,'Gap (31)','hospitable|stressful|inconvenient|crowded','A'),M(32,'Gap (32)','use|using|to use|used','B'),M(33,'Gap (33)','experience|experienced|experiencing|experiences','A'),
+M(34,'What does the sign mean?','Students must not use their phones in class.|Students must use their phones in class.|Students should play games during lessons.|Students can make phone calls at any time.','A'),
+M(35,'What does the notice say?','The event is on Saturday afternoon.|Participants should bring gloves and a reusable bag.|The event takes place at the school library.|Participants should bring food to sell.','B'),
+M(36,'What does the sign mean?','You can play football on the grass.|You must not walk on the grass.|You should water the grass.|You can pick flowers here.','B'),
+M(37,'What is the notice mainly about?','A session about managing homework and stress.|A football match.|A visit to a farm.|A cooking lesson.','A'),
+M(38,'What is the passage mainy about?','Huy’s way of balancing study and free time|How to become a badminton player|The history of the internet|Life on a farm','A'),
+M(39,'What problem did Huy have last term?','He had no friends.|He spent too much time watching online videos.|He disliked science books.|He never did any exercise.','B'),
+M(40,'What did Huy’s sister suggest?','Buying a new phone|Stopping all hobbies|Making a timetable|Studying all night','C'),
+M(41,'How often does Huy play badminton now?','Every day|Once a month|Twice a week|Only during holidays','C'),
+M(42,'What does Huy do before using his phone now?','He finishes his homework.|He goes shopping.|He watches videos.|He goes to bed.','A')];
+Q.find(q=>q.n==38).s='What is the passage mainly about?';
+const W=[[43,'My brother / be keen on / play / chess.','','My brother is keen on playing chess.',[/^my brother is keen on playing chess$/]],
+[44,'Teenagers / should / get / enough sleep.','','Teenagers should get enough sleep.',[/^teenagers should (get|have) enough sleep$/]],
+[45,'Life in the countryside / be / peaceful / than / life in the city.','','Life in the countryside is more peaceful than life in the city.',[/^life in the countryside is more peaceful than life in the city$/]],
+[46,'Hoa / enjoy / take photos / when / visit / grandparents.','','Hoa enjoys taking photos when she visits her grandparents.',[/^hoa enjoys taking photos (when she visits|when visiting) her grandparents$/]],
+[47,'I like reading adventure stories.','I enjoy','I enjoy reading adventure stories.',[/^i enjoy reading adventure stories$/]],
+[48,'The countryside is quieter than the city.','The city is','The city is noisier than the countryside.',[/^the city is (noisier than|less quiet than|not as quiet as) the countryside$/]],
+[49,'It is a good idea for teenagers to take breaks while studying.','Teenagers should','Teenagers should take breaks while studying.',[/^teenagers should take (a )?breaks? while (studying|they study|they are studying)$/]],
+[50,'My brother spends twenty minutes cycling to school.','My brother cycles to school for','My brother cycles to school for twenty minutes.',[/^my brother cycles to school for (twenty|20) minutes$/]]];
+W.forEach(w=>Q.push({n:w[0],s:w[1],pre:w[2],key:w[3],re:w[4],k:'w'}));
+const cloze=`<div class="pass"><b>HELPING ON THE FARM</b><br>During the summer holiday, I stayed with my grandparents in the countryside. Their house is close <b>(28)</b> a large rice field. Every morning, I helped my grandfather <b>(29)</b> the chickens and collect eggs. My grandmother showed me how to grow vegetables. The village was much <b>(30)</b> than the city, and the air was fresh. The neighbours were friendly and <b>(31)</b>. In the evening, my cousins and I played chess instead of spending too much time <b>(32)</b> our phones. I enjoyed this holiday because it was a useful and relaxing <b>(33)</b>.</div>`;
+const read=`<div class="pass"><b>BALANCING STUDY AND FREE TIME</b><br>Huy is a grade 8 student who enjoys playing badminton and reading science books. Last term, he spent too much time watching videos online. He often started his homework late and felt tired the next day. His older sister suggested making a simple timetable. Huy now finishes his homework before using his phone, and he takes a short break after every forty minutes of study. He also plays badminton with his friends twice a week. Huy says that planning his time helps him feel less stressed and enjoy his hobbies. He still uses the internet, but he tries to choose useful content and stop using his phone before bedtime.</div>`;
+const G=[
+{t:'Listening',h:'Part A · Listening',lay:'l',secs:[['','Listen to two students talking about their weekend activities and school stress. Choose the correct answer A, B, C or D. You will listen TWICE.',[1,2,3,4,5,6]]]},
+{t:'Phonetics',h:'Pronunciation & Stress',lay:'g',secs:[['Part B · Pronunciation','Choose the word whose underlined part is pronounced differently from the others.',[7,8,9]],['Part C · Stress','Choose the word that has a different primary stress pattern.',[10,11,12]]]},
+{t:'Vocabulary',h:'Part D · Vocabulary and Grammar',lay:'g',secs:[['','Choose the best answer A, B, C or D.',[13,14,15,16,17,18,19,20,21,22,23,24,25,26,27]]]},
+{t:'Cloze',h:'Part E · Cloze Test',lay:'s',ctx:cloze,secs:[['','Read the passage and choose the best answer for each blank.',[28,29,30,31,32,33]]]},
+{t:'Signs',h:'Part F · Signs and Notices',lay:'g',secs:[['','Read each sign or notice and choose the correct answer.',[34,35,36,37]]]},
+{t:'Reading',h:'Part G · Reading',lay:'s',ctx:read,secs:[['','Read the passage and choose the correct answer.',[38,39,40,41,42]]]},
+{t:'Writing',h:'Part H · Writing',lay:'w',secs:[['I. Write meaningful sentences','Write meaningful sentences using the words given.',[43,44,45,46]],['II. Rewrite the sentences','Rewrite the sentences without changing their meanings. The given words are already in the answer box — type only the rest of the sentence.',[47,48,49,50]]]}];
+const NG=G.length,gOf=n=>G.findIndex(x=>x.secs.some(s=>s[2].includes(n))),ans={},byN=n=>Q.find(q=>q.n==n);let cur=0,t0,t1,end,timer,done=false,R;
+const answered=q=>ans[q.n]!==undefined&&String(ans[q.n]).trim()!=='';
+/* ---------- audio: British English voices (or optional recorded file) ---------- */
+let voices=[],vE=null,vT=null,plays=0,playing=false,line=-1,rec=null;const SS='speechSynthesis' in window;
+const NICE=/Natural|Online|Neural|Premium|Enhanced/i,FEM=/Libby|Sonia|Hazel|Susan|Serena|Kate|Stephanie|Martha|Female|Fiona|Amy|Emma/i,MAS=/Ryan|Thomas|George|Daniel|Oliver|Arthur|Male|James|Brian/i;
+function pickV(){if(!SS)return;voices=speechSynthesis.getVoices()||[];const gb=voices.filter(v=>/^en[-_]GB/i.test(v.lang)).sort((a,b)=>NICE.test(b.name)-NICE.test(a.name)),en=voices.filter(v=>/^en/i.test(v.lang));
+vE=gb.find(v=>FEM.test(v.name))||gb.find(v=>!MAS.test(v.name))||gb[0]||en[0]||null;vT=gb.find(v=>MAS.test(v.name)&&v!==vE)||gb.find(v=>v!==vE)||vE;}
+if(SS){pickV();speechSynthesis.onvoiceschanged=pickV}
+const voiceInfo=()=>{if(!SS&&!AUDIO_SRC)return 'Audio is not supported in this browser. Please use Chrome, Edge or Safari.';if(AUDIO_SRC)return 'Recorded audio is ready.';pickV();if(!vE)return 'No speech voice was found on this device. Please try another browser or device.';return /^en[-_]GB/i.test(vE.lang)?`British English voice ready: ${vE.name}${vT&&vT!==vE?' and '+vT.name:''}.`:`A British English voice is not installed on this device. Using: ${vE.name} (${vE.lang}).`};
+function say(text,who,cb){if(!SS||!vE){cb&&cb();return}const u=new SpeechSynthesisUtterance(text),v=who=='T'?vT:vE;u.voice=v;u.lang=(v&&v.lang)||'en-GB';u.rate=.9;u.pitch=(vE===vT)?(who=='T'?.8:1.18):1;u.onend=u.onerror=()=>cb&&cb();speechSynthesis.speak(u)}
+function lui(){const b=$('#aplay');if(!b)return;const left=2-plays;b.disabled=playing||left<=0;b.textContent=playing?'Playing…':left<=0?'Recording finished':plays?'▶ Play again (2 of 2)':'▶ Play recording (1 of 2)';$('#aeq').classList.toggle('on',playing);$('#acnt').textContent=`Played ${plays} of 2`;$('#afill').style.width=(playing&&!AUDIO_SRC?(line+1)/SCRIPT.length*100:(plays>0?100:0))+'%';$('#amsg').textContent=voiceInfo()}
+function aplay(){if(playing||plays>=2)return;playing=true;line=-1;lui();const fin=()=>{playing=false;plays++;lui()};
+if(AUDIO_SRC){rec=rec||new Audio(AUDIO_SRC);rec.currentTime=0;rec.onended=fin;rec.play().catch(()=>{playing=false;lui()});return}
+if(!SS||!vE){playing=false;lui();return}speechSynthesis.cancel();let i=0;const nx=()=>{if(i>=SCRIPT.length)return setTimeout(fin,300);line=i;lui();const s=SCRIPT[i++];say(s[1],s[0],()=>setTimeout(nx,420))};setTimeout(nx,350)}
+const audioCard=()=>`<div class="aud"><div class="eq" id="aeq"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div><b>Listening recording</b><div class="sm">Two students talk about weekends and school stress. You can listen <b>twice</b>.</div><div class="abar"><i id="afill"></i></div><div class="sm"><span id="acnt"></span> · <span id="amsg"></span></div></div><button id="aplay" class="gold" type="button">▶ Play recording (1 of 2)</button></div>`;
+/* ---------- render ---------- */
+function qh(q){const v=ans[q.n]??'';let h=`<div class="q" id="q${q.n}"><div class="qrow"><span class="qn">${q.n}</span><div class="qb">`;
+if(q.k=='w')return h+`<div class="qt">${esc(q.s)}</div><div class="fld"><span class="pf">${q.pre?esc(q.pre):''}</span><input type="text" data-n="${q.n}" value="${esc(String(v))}" autocomplete="off" spellcheck="false" autocapitalize="off" autocorrect="off" placeholder="${q.pre?'Type the rest of the sentence':'Write your sentence here'}" aria-label="Question ${q.n}${q.pre?', after '+esc(q.pre):''}"></div></div></div></div>`.replace('<span class="pf"></span>','');
+if(S[q.n])h+=`<div class="qt">${q.s}</div><div class="sgv">${S[q.n]}</div>`;else if(q.n>=28&&q.n<=33)h+=`<div class="qt sm">${q.s}</div>`;else h+=`<div class="qt">${q.s.replace(/______/g,'<span class="bl">______</span>')}</div>`;
+h+=q.o.map((o,i)=>`<label class="opt"><input type="radio" name="r${q.n}" data-n="${q.n}" value="${i}" ${v===i?'checked':''}><span class="lt">${L[i]}</span><span>${o}</span></label>`).join('');return h+'</div></div></div>'}
+function tabsR(){$('#tabs').innerHTML=G.map((x,i)=>{const qs=x.secs.flatMap(s=>s[2]).map(byN),d=qs.filter(answered).length;return `<button class="${i==cur?'on':''}" data-p="${i}">${x.t}<small>${d}/${qs.length}</small></button>`}).join('');const on=$('#tabs .on');on&&on.scrollIntoView({inline:'center',block:'nearest'})}
+function setHH(){document.documentElement.style.setProperty('--hh',$('header').offsetHeight+'px')}addEventListener('resize',setHH);
+function show(g){const c0=cur;cur=g;const gr=G[g];$('#body').dataset.dir=g>=c0?'fw':'bk';
+const secs=gr.secs.map(s=>`<div class="sec">${s[0]?`<h3>${s[0]}</h3>`:''}<p class="sm">${s[1]}</p></div>${gr.lay=='l'?audioCard():''}<div class="${gr.lay=='g'||gr.lay=='l'?'g2':'qs1'}">${s[2].map(n=>qh(byN(n))).join('')}</div>`).join('');
+const rg=gr.secs.flatMap(s=>s[2]);
+$('#body').innerHTML=`<div class="ph"><div class="eb">Section ${g+1} of ${NG} · Questions ${rg[0]}–${rg[rg.length-1]}</div><h2>${gr.h}</h2></div>`+(gr.lay=='s'?`<div class="split"><aside class="ps" tabindex="0" aria-label="Reading text">${gr.ctx}</aside><div class="qs">${secs}</div></div>`:secs);
+if(gr.lay=='l'){$('#aplay').onclick=aplay;lui()}
+$('#prev').style.visibility=g==0?'hidden':'visible';$('#next').style.visibility=g==NG-1?'hidden':'visible';pal();obs();setHH()}
+function pal(){tabsR();$('#pal').innerHTML=Q.map(q=>`<button data-j="${q.n}" class="${answered(q)?'d':''} ${gOf(q.n)==cur?'c':''}" aria-label="Question ${q.n}">${q.n}</button>`).join('');const n=Q.filter(answered).length;$('#prog').textContent=`Answered ${n}/50`;$('#prog2').textContent=`· ${n}/50`;$('#pb').style.width=n/50*100+'%'}
+document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.p){show(+b.dataset.p);scrollTo(0,0)}if(b.id=='prev'){show(cur-1);scrollTo(0,0)}if(b.id=='next'){show(cur+1);scrollTo(0,0)}
+if(b.dataset.j){const n=+b.dataset.j;show(gOf(n));const el=document.getElementById('q'+n);el&&el.scrollIntoView({block:'center'})}});
+document.addEventListener('input',e=>{const t=e.target;if(done||!t.dataset.n)return;ans[t.dataset.n]=t.type=='radio'?+t.value:t.value;pal()});
+document.addEventListener('pointermove',e=>{const q=e.target.closest&&e.target.closest('.q,.login');if(q){const r=q.getBoundingClientRect();q.style.setProperty('--mx',e.clientX-r.left+'px');q.style.setProperty('--my',e.clientY-r.top+'px')}});
+const fmt=d=>d.toLocaleString('en-GB'),nm=()=>$('#nm').value.trim()||'(name not entered)',cls=()=>'';
+$('#go').onclick=()=>{if(SS)speechSynthesis.cancel();t0=new Date();end=Date.now()+TIME*60000;document.body.classList.add('ex');$('#start').classList.add('hide');$('#exam').classList.remove('hide');['#tmw','#tabs','#prog','#dock'].forEach(x=>$(x).classList.remove('hide'));if(innerWidth<900)$('#palw').open=false;show(0);timer=setInterval(tick,500);tick();scrollTo(0,0)};
+function tick(){const r=Math.max(0,end-Date.now()),s=Math.ceil(r/1000);$('#tm').textContent=String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');$('#tc').style.strokeDashoffset=113.1*(1-r/(TIME*60000));$('#tmw').classList.toggle('low',s<=300);if(!s)finish(true)}
+$('#sub').onclick=()=>{const em=Q.filter(q=>!answered(q)).length;if(confirm((em?`You have ${em} unanswered question${em>1?'s':''}.\n`:'')+'Submit your answers now? You will not be able to change them afterwards.'))finish(false)};
+const norm=s=>s.toLowerCase().replace(/[’‘]/g,"'").replace(/\bi'm\b/g,'i am').replace(/\bit's\b/g,'it is').replace(/n't\b/g,' not').replace(/[^a-z0-9\s]/g,'').replace(/\s+/g,' ').trim();
+const ok=q=>{if(!answered(q))return 'blank';if(q.k=='mc')return ans[q.n]===q.a?'ok':'bad';return q.re.some(r=>r.test(norm((q.pre?q.pre+' ':'')+ans[q.n])))?'ok':'bad'};
+const MQ=Q.filter(q=>q.k=='mc'),WQ=Q.filter(q=>q.k=='w'),strip=s=>s.replace(/<\/?u>/g,'');
+const as=q=>{const v=ans[q.n];return !answered(q)?'(no answer)':q.k=='w'?(q.pre?q.pre+' ':'')+String(v).trim():L[v]+'. '+strip(q.o[v])},cs=q=>q.k=='w'?q.key:L[q.a]+'. '+strip(q.o[q.a]);
+const mins=()=>{const m=Math.round((t1-t0)/1000);return Math.floor(m/60)+' min '+m%60+' s'},r2=x=>(Math.round(x*100)/100).toFixed(2);
+function finish(auto){if(done)return;done=true;clearInterval(timer);if(SS)speechSynthesis.cancel();if(rec)rec.pause();t1=new Date();if(auto)alert('Time is up. Your answers have been submitted automatically.');document.body.classList.remove('ex');$('#exam').classList.add('hide');['#tmw','#tabs','#prog','#dock'].forEach(x=>$(x).classList.add('hide'));draw();scrollTo(0,0)}
+const who=()=>nm()+(cls()?' · Class '+cls():'');
+function draw(){const mc=MQ.filter(q=>ok(q)=='ok').length,wk=WQ.filter(q=>ok(q)=='ok').length,mp=mc*.2,wp=wk*.2,tot=mp+wp,bad=Q.filter(q=>ok(q)=='bad').length,bl=Q.filter(q=>ok(q)=='blank').length;
+const secs=G.map(g=>{const qs=g.secs.flatMap(s=>s[2]).map(byN);return{t:g.t,c:qs.filter(q=>ok(q)=='ok').length,n:qs.length}});
+R={mc,wk,mp,wp,tot,bad,bl,secs};const C=2*Math.PI*60,off=C*(1-tot/10);
+let h=`<div class="card"><div class="eb">AURELIA ACADEMY</div><h2>English 8 Mid-term Test – Results</h2><div class="score"><div class="ring"><svg width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="60" fill="none" stroke="rgba(167,139,250,.2)" stroke-width="12"/><circle id="rc" cx="75" cy="75" r="60" fill="none" stroke="#A78BFA" stroke-width="12" stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${C}" style="transition:stroke-dashoffset 1.2s cubic-bezier(.2,.8,.2,1)"/></svg><b id="tn">0</b></div><div><div style="font-weight:700;font-size:26px;letter-spacing:-.03em">${r2(tot)} / 10</div><div class="sm">Questions 1–42: ${r2(mp)} / 8.40 · Writing: ${r2(wp)} / 1.60</div></div></div>
+<table><tr><th>Candidate</th><td>${esc(who())}</td></tr><tr><th>Summary</th><td><span class="ok">✓ Correct ${mc+wk}</span> · <span class="bad">✗ Incorrect ${bad}</span> · <span class="wn">– Unanswered ${bl}</span> (50 questions)</td></tr><tr><th>Started / Submitted</th><td>${fmt(t0)} → ${fmt(t1)} (${mins()})</td></tr></table>
+<div class="bars">${secs.map(s=>`<div class="br"><span>${s.t}</span><div><i style="width:0" data-w="${s.c/s.n*100}"></i></div><b>${s.c}/${s.n}</b></div>`).join('')}</div>
+<div class="ctl"><button class="gold" id="dl">Download PDF report</button><button class="s" onclick="print()">Print</button></div></div>
+<div class="card"><h2>Multiple-choice review</h2><div class="tw"><table><tr><th>Q</th><th>Your answer</th><th>Correct answer</th><th></th></tr>`;
+const st=t=>t=='ok'?'<span class="ok">✓ Correct</span>':t=='bad'?'<span class="bad">✗ Incorrect</span>':'<span class="wn">– Unanswered</span>';
+MQ.forEach(q=>{h+=`<tr><td>${q.n}</td><td>${esc(as(q))}</td><td>${esc(cs(q))}</td><td>${st(ok(q))}</td></tr>`});
+h+=`</table></div></div><div class="card"><h2>Writing review</h2>`;
+WQ.forEach(q=>{const t=ok(q);h+=`<div class="wr"><div class="sm">${q.n}. ${esc(q.s)}</div><div class="ans">${esc(as(q))}</div><div class="sm">Model answer: <b>${esc(q.key)}</b> · ${st(t)} · ${t=='ok'?'0.20':'0.00'} / 0.20</div></div>`});
+$('#res').innerHTML=h+'</div>';$('#res').classList.remove('hide');
+requestAnimationFrame(()=>{$('#rc').style.strokeDashoffset=off;document.querySelectorAll('.br i').forEach(i=>i.style.width=i.dataset.w+'%');const s0=performance.now(),el=$('#tn');const f=t=>{const p=Math.min(1,(t-s0)/1200);el.textContent=r2(tot*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)};matchMedia('(prefers-reduced-motion: reduce)').matches?el.textContent=r2(tot):requestAnimationFrame(f)});
+$('#dl').onclick=()=>{const b=makePDF();const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='English8-Midterm_'+nm().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/gi,'d').replace(/[^\w]+/g,'_')+'.pdf';document.body.appendChild(a);a.click();a.remove()}}
+/* ---------- PDF (A4 pages drawn on canvas, embedded as JPEG) ---------- */
+function makePDF(){const PW=1240,PH=1754,pages=[];let c,y;
+const np=()=>{const cv=document.createElement('canvas');cv.width=PW;cv.height=PH;c=cv.getContext('2d');c.fillStyle='#fff';c.fillRect(0,0,PW,PH);const g=c.createLinearGradient(0,0,PW,0);g.addColorStop(0,'#120D20');g.addColorStop(1,'#4C1D95');c.fillStyle=g;c.fillRect(0,0,PW,120);c.fillStyle='#D4B26A';c.font=`700 30px ${FONT}`;c.textAlign='left';c.fillText('AURELIA ACADEMY',70,74);c.fillStyle='#DDD6FE';c.font=`500 22px ${FONT}`;c.textAlign='right';c.fillText('English 8 Mid-term Test',PW-70,72);c.fillStyle='#8B82A5';c.font=`400 19px ${FONT}`;c.textAlign='center';c.fillText('AURELIA ACADEMY · Contact: 0964 964 264 | Ms. Angie · © 2026 Aurelia Academy. All rights reserved.',PW/2,PH-48);c.textAlign='left';pages.push(cv);y=180};
+const need=h=>{if(y+h>PH-110)np()};
+const fit=(t,m)=>{if(c.measureText(t).width<=m)return t;while(t.length>1&&c.measureText(t+'…').width>m)t=t.slice(0,-1);return t+'…'};
+const wrap=(t,m)=>{const o=[];String(t).split('\n').forEach(p=>{let l='';p.split(' ').forEach(w=>{const tt=l?l+' '+w:w;if(c.measureText(tt).width>m&&l){o.push(l);l=w}else l=tt});o.push(l)});return o};
+const H2=t=>{need(90);y+=18;c.fillStyle='#4C1D95';c.font=`700 34px ${FONT}`;c.fillText(t,70,y);y+=14;c.fillStyle='#D4B26A';c.fillRect(70,y,90,4);y+=40};
+const P=(t,o={})=>{c.font=`${o.w||400} ${o.s||24}px ${FONT}`;c.fillStyle=o.col||'#21163D';wrap(t,o.m||PW-140).forEach(l=>{need(38);c.fillText(l,o.x||70,y);y+=o.lh||36})};
+const ROW=(cells,xs,o={})=>{need(48);if(o.bg){c.fillStyle=o.bg;c.fillRect(70,y-30,PW-140,46)}c.font=`${o.w||400} 22px ${FONT}`;cells.forEach((t,i)=>{c.fillStyle=(o.cols&&o.cols[i])||'#21163D';c.fillText(fit(String(t),(xs[i+1]||PW-70)-xs[i]-14),xs[i],y)});y+=46};
+np();
+c.fillStyle='#21163D';c.font=`700 44px ${FONT}`;c.fillText('Results Report',70,y);y+=50;
+c.font=`400 24px ${FONT}`;c.fillStyle='#6B6185';[['Candidate',nm()],['Started',fmt(t0)],['Submitted',fmt(t1)+'  ('+mins()+')']].forEach(r=>{c.fillText(r[0],70,y);c.fillStyle='#21163D';c.font=`600 24px ${FONT}`;c.fillText(r[1],270,y);c.fillStyle='#6B6185';c.font=`400 24px ${FONT}`;y+=38});y+=14;
+[['Total',r2(R.tot)+' / 10','#4C1D95'],['Questions 1–42',r2(R.mp)+' / 8.40','#6D28D9'],['Writing',r2(R.wp)+' / 1.60','#8F6B1E']].forEach((b,i)=>{const x=70+i*368;c.fillStyle='#F4F0FF';c.beginPath();c.roundRect(x,y,340,130,18);c.fill();c.fillStyle='#6B6185';c.font=`500 20px ${FONT}`;c.fillText(b[0],x+24,y+38);c.fillStyle=b[2];c.font=`700 42px ${FONT}`;c.fillText(b[1],x+24,y+95)});y+=170;
+P(`Correct ${R.mc+R.wk}  ·  Incorrect ${R.bad}  ·  Unanswered ${R.bl}  (50 questions)`,{w:600});y+=10;
+H2('Results by section');R.secs.forEach(s=>{need(50);c.font=`400 22px ${FONT}`;c.fillStyle='#21163D';c.fillText(s.t,70,y);c.fillStyle='#EDE9FE';c.fillRect(520,y-20,520,18);c.fillStyle='#6D28D9';c.fillRect(520,y-20,520*s.c/s.n,18);c.fillStyle='#21163D';c.font=`600 22px ${FONT}`;c.fillText(s.c+' / '+s.n,1070,y);y+=48});
+H2('Multiple-choice answers (Questions 1–42)');const xs=[70,150,640,1010];ROW(['Q','Your answer','Correct answer','Result'],xs,{w:700,bg:'#EDE9FE'});
+MQ.forEach((q,i)=>{const t=ok(q);ROW([q.n,as(q),cs(q),t=='ok'?'Correct':t=='bad'?'Incorrect':'Unanswered'],xs,{bg:i%2?'#FAF9FF':null,cols:[null,null,null,t=='ok'?'#15803D':t=='bad'?'#B91C1C':'#B45309']})});
+H2('Writing (Questions 43–50)');WQ.forEach(q=>{const t=ok(q);need(170);P(q.n+'. '+q.s,{w:600,s:22,col:'#6B6185'});P('Student: '+as(q),{s:23});P('Model answer: '+q.key,{s:23,col:'#4C1D95',w:600});P((t=='ok'?'Correct':t=='bad'?'Incorrect':'Unanswered')+' · '+(t=='ok'?'0.20':'0.00')+' / 0.20',{s:21,w:700,col:t=='ok'?'#15803D':t=='bad'?'#B91C1C':'#B45309'});y+=14});
+const imgs=pages.map(cv=>{const d=cv.toDataURL('image/jpeg',.92).split(',')[1],bin=atob(d),u=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i);return{d:u,w:cv.width,h:cv.height}});
+const enc=new TextEncoder(),ch=[],off=[];let pos=0;const add=d=>{const b=typeof d=='string'?enc.encode(d):d;ch.push(b);pos+=b.length};
+const obj=(i,f)=>{off[i]=pos;add(i+' 0 obj\n');f();add('\nendobj\n')},n=imgs.length;add('%PDF-1.4\n');
+obj(1,()=>add('<< /Type /Catalog /Pages 2 0 R >>'));obj(2,()=>add('<< /Type /Pages /Kids ['+imgs.map((_,k)=>(3+k*3)+' 0 R').join(' ')+'] /Count '+n+' >>'));
+imgs.forEach((im,k)=>{const p=3+k*3,s='q 595.28 0 0 841.89 0 0 cm /Im0 Do Q';obj(p,()=>add(`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /XObject << /Im0 ${p+2} 0 R >> >> /Contents ${p+1} 0 R >>`));obj(p+1,()=>add(`<< /Length ${s.length} >>\nstream\n${s}\nendstream`));obj(p+2,()=>{add(`<< /Type /XObject /Subtype /Image /Width ${im.w} /Height ${im.h} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${im.d.length} >>\nstream\n`);add(im.d);add('\nendstream')})});
+const xr=pos,tot=3+n*3;add(`xref\n0 ${tot}\n0000000000 65535 f \n`);for(let i=1;i<tot;i++)add(String(off[i]).padStart(10,'0')+' 00000 n \n');add(`trailer\n<< /Size ${tot} /Root 1 0 R >>\nstartxref\n${xr}\n%%EOF`);return new Blob(ch,{type:'application/pdf'})}
+const rt=document.documentElement,th=$('#th'),setT=t=>{rt.dataset.theme=t;th.textContent=t=='dark'?'☾':'☀'};
+setT(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');th.onclick=()=>setT(rt.dataset.theme=='dark'?'light':'dark');
+addEventListener('scroll',()=>$('header').classList.toggle('sc',scrollY>8),{passive:true});
+let io;function obs(){if(!('IntersectionObserver' in window)){document.querySelectorAll('.q').forEach(e=>e.classList.add('in'));return}io&&io.disconnect();io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.05});document.querySelectorAll('.q').forEach((e,i)=>{e.classList.add('rv');e.style.transitionDelay=Math.min(i,5)*.05+'s';io.observe(e)})}
+</script></body></html>
